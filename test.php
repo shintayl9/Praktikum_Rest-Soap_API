@@ -6,7 +6,6 @@ if ($response === false) {
 }
 
 $data = json_decode($response, true);
-//print_r($data);
 
 ?>
 
@@ -21,13 +20,11 @@ $data = json_decode($response, true);
 
 <body>
     <h1>BITCOIN PRICE</h1>
-    <p>USD :
-        <?php echo $data['bpi']['USD']['rate']; ?>
-    </p>
-    <p>GBP :
-        <?php echo $data['bpi']['USD']['rate']; ?></p>
-    <p>EUR :
-        <?php echo $data['bpi']['USD']['rate']; ?></p>
+    <div>
+        <p>USD : <?php echo $data['bpi']['USD']['rate']; ?></p>
+        <p>GBP : <?php echo $data['bpi']['GBP']['rate']; ?></p>
+        <p>EUR : <?php echo $data['bpi']['EUR']['rate']; ?></p>
+    </div>
 </body>
 
 </html>
